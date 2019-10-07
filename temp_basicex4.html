@@ -18,7 +18,7 @@ var x = Math.round(Math.random() * (max - min)) + min;
 
 if (x <= 10) {
 document.getElementById("test").innerHTML = x+"c - The weather is cold" ;
-document.getElementById("img").style.backgroundImage="url("sonne.jpg")";
+myFunction();
 
 } else if  (x > 32) {
 document.getElementById("test").innerHTML = x+ "c - The weather is hot" ;
@@ -27,9 +27,22 @@ document.getElementById("test").innerHTML = x+ "c - The weather is moderate";
 }
 }
 
+
+
+
+function myFunction() {
+  var t = document.createElement("IMG");
+  t.setAttribute("src", "sonne.jpg");
+  t.setAttribute("width", "304");
+  t.setAttribute("height", "228");
+  t.setAttribute("alt", "sonne");
+  document.body.appendChild(t);
+}
+
 </script>
 </head>
 <body>
+		
   <input onclick="callTemp(min, max)" type="button" value="click me">
 	<p id=test></p>
 	<div id="img"></div> 
