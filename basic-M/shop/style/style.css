@@ -1,0 +1,185 @@
+.top-h{
+    width: 100%;
+    margin: 0 auto;
+}
+/*** grid ****/
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 12px;
+    grid-row-gap: 12px;
+    height:90vh;
+    p
+    }
+    
+    .div1 { grid-area: 2 / 2 / 3 / 3; }
+    .div2 { grid-area: 2 / 3 / 3 / 4; }
+    .div3 { grid-area: 2 / 4 / 3 / 5; }
+    .div4 { grid-area: 3 / 2 / 4 / 3; }
+    .div5 { grid-area: 3 / 3 / 4 / 4; }
+    .div6 { grid-area: 3 / 4 / 4 / 5; }
+    .div7 { grid-area: 4 / 2 / 5 / 3; }
+    .div8 { grid-area: 4 / 3 / 5 / 4; }
+    .div9 { grid-area: 4 / 4 / 5 / 5; }
+
+
+    #card{
+        background-color:red;
+        border:solid 3px #000000 ;
+        width:100%;
+        height:80%;
+        margin:0 auto;
+        
+    }
+    /***grid END ***/
+
+
+
+
+
+/*** navi bar***/
+.menu
+{margin:0 auto;
+     padding:0;
+      height:30px;
+       width:100%; display:block; background-color:black;}
+.menu li{padding:0; margin:0; list-style:none; display:inline;}
+.menu li a{float:left; padding-left:15px; display:block; color:rgb(255,255,255); text-decoration:none; font:12px Verdana, Arial, Helvetica, sans-serif; cursor:pointer; background:url('topMenuImages.png') 0px -30px no-repeat;}
+.menu li a span{line-height:30px; float:left; display:block; padding-right:15px; background-color:black;}
+.menu li a:hover{background-position:0px -60px; color:rgb(255,255,255);}
+.menu li a:hover span{background-position:100% -60px;}
+.menu li a.active, .menu li a.active:hover{line-height:30px; font:12px Verdana, Arial, Helvetica, sans-serif; background-color:gray; color:rgb(255,255,255);}
+.menu li a.active span, .menu li a.active:hover span{background-color:red;}
+  /****navi bar END ***/
+  /***** Carousel ****/
+  
+
+ul.slides {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 700px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    list-style: none;
+}
+
+.slides * {
+    user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+ul.slides input {
+    display: none; 
+}
+
+
+.slide-container { 
+    display: block; 
+}
+
+.slide-image {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    transition: all .7s ease-in-out;
+    margin: 0 auto;
+}   
+
+.slide-image img {
+    width: auto;
+    min-width: 100%;
+    height: 100%;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    font-size: 100px;
+    line-height: 600px;
+    color: #fff;
+}
+
+.carousel-controls label {
+    display: none;
+    position: absolute;
+    padding: 0 20px;
+    opacity: 0;
+    transition: opacity .2s;
+    cursor: pointer;
+}
+
+.slide-image:hover + .carousel-controls label{
+    opacity: 0.5;
+}
+
+.carousel-controls label:hover {
+    opacity: 1;
+}
+
+.carousel-controls .prev-slide {
+    width: 49%;
+    text-align: left;
+    left: 0;
+}
+
+.carousel-controls .next-slide {
+    width: 100%;
+    text-align: right;
+    right: 0;
+}
+
+.carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 20px;
+    z-index: 999;
+    text-align: center;
+}
+
+.carousel-dots .carousel-dot {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.5;
+    margin: 10px;
+}
+
+input:checked + .slide-container .slide-image {
+    opacity: 1;
+    transform: scale(1);
+    transition: opacity 1s ease-in-out;
+}
+
+input:checked + .slide-container .carousel-controls label {
+     display: block; 
+}
+
+input#img-1:checked ~ .carousel-dots label#img-dot-1,
+input#img-2:checked ~ .carousel-dots label#img-dot-2,
+input#img-3:checked ~ .carousel-dots label#img-dot-3,
+input#img-4:checked ~ .carousel-dots label#img-dot-4,
+input#img-5:checked ~ .carousel-dots label#img-dot-5,
+input#img-6:checked ~ .carousel-dots label#img-dot-6 {
+	opacity: 1;
+}
+
+
+input:checked + .slide-container .nav label { display: block; }
+
+/**** Carousel END ****/
