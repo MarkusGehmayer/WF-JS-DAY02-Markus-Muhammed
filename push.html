@@ -4,7 +4,17 @@
 <head>
        <title></title>
        <script>
+function callTemp(min, max) {
+var min = -5;
+var max = 25;
+var x = Math.round(Math.random() * (max - min)) + min;
 
+if (x <= 10) {
+document.getElementById("test").innerHTML = x+"c - The weather is cold";
+} else {
+document.getElementById("test").innerHTML = x+ "c - The weather is moderate";
+}
+}
 
 </script>
 </head>

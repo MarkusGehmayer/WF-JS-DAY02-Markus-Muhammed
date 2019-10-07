@@ -34,13 +34,22 @@
 // }
 // console.log(largestNumber);
 
+function arrPro () {
+var arrProduct = [1, 3, 7 ,10, 2];
+var product = 1;
 
+for (i = 0 ; i < arrProduct.length ; i+=1) 
+   {
+    product *= arrProduct[i];
+    }
+    console.log(product); 
+}
 
  
 </script>
 </head>
 <body>
-	<input onclick="arrayFunc()" type="button" value="click me">
+	<input onclick="arrPro()" type="button" value="click me">
 	<p id=test></p>
    
 </body>
