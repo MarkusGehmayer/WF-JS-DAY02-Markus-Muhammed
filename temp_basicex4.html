@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+       <title></title>
+       <script>
+       	function showimg(src , width , height, alt){
+       		img.src= src;
+       		img.width= width;
+       		img.height=height;
+       		img.alt= alt;
+       		document.body.appendchild(img);
+       	}
+function callTemp(min, max) {
+var min = -5;
+var max = 25;
+var x = Math.round(Math.random() * (max - min)) + min;
+
+if (x <= 10) {
+document.getElementById("test").innerHTML = x+"c - The weather is cold" ;
+document.getElementById("img").style.backgroundImage="url("sonne.jpg")";
+
+} else if  (x > 32) {
+document.getElementById("test").innerHTML = x+ "c - The weather is hot" ;
+} else {
+document.getElementById("test").innerHTML = x+ "c - The weather is moderate";
+}
+}
+
+</script>
+</head>
+<body>
+  <input onclick="callTemp(min, max)" type="button" value="click me">
+	<p id=test></p>
+	<div id="img"></div> 
+</body>
+</html>

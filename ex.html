@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+       <title></title>
+       <script>
+
+// function callTemp(min, max) {
+// var min = -5;
+// var max = 25;
+// var x = Math.round(Math.random() * (max - min)) + min;
+
+// 	if (x <= 10) {
+// 		document.getElementById("test").innerHTML = x+"c - The weather is cold";
+// 	} else {
+// 		document.getElementById("test").innerHTML = x+ "c - The weather is moderate";
+// 	}
+// }
+
+// function arrayFunc() {
+//    var arr1 = [1,7,-3,9];
+//    var ergebnis = Math.max(...arr1);
+   
+//   document.getElementById("test").innerHTML = ergebnis;
+//  }
+
+
+// var arr1 = [1,7,-3,9];
+// var largestNumber = arr1[0];
+
+
+// for (i = 0; i < arr1.length; i++) {
+// 	if (largestNumber<arr1[i]){	largestNumber=arr1[i];}
+// }
+// console.log(largestNumber);
+
+function arrPro () {
+var arrProduct = [1, 3, 7 ,10, 2];
+var product = 1;
+
+for (i = 0 ; i < arrProduct.length ; i+=1) 
+   {
+    product *= arrProduct[i];
+    }
+    console.log(product); 
+}
+
+ 
+</script>
+</head>
+<body>
+	<input onclick="arrPro()" type="button" value="click me">
+	<p id=test></p>
+   
+</body>
+</html>
